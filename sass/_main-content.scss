@@ -1,0 +1,109 @@
+/*.challenge {
+    width: 1000PX;
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-rows: 100px 200px 400px 100px; 
+    grid-template-columns: repeat(3, 1fr) 200px;
+    grid-gap: 30px;
+
+
+
+    & > * {
+        background-color: blueviolet;
+        padding: 20px;
+        color: white;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+
+    .header {
+        grid-column: 1 / -1;
+        
+    }
+
+    .sidebar {
+        grid-column: 4 / 5;
+        grid-row: 2 / span 2;
+         
+    }
+
+    .main-content {
+        grid-column: 1 / span 3;
+    }
+
+    .footer {
+        grid-column: 1 / -1;
+    }
+
+    ///////////////////////
+    /// 2nd method lines
+    ///  display: grid;
+    /// 
+    
+    /*grid-template-rows: [header-start] 100px [header-end box-start] 200px [box-end main-start] 400px [main-end footer-start] 100px [footer-start]; 
+    grid-template-columns: repeat(3, [col-start] 1fr) 200px;
+    grid-gap: 30px;
+
+    .header {
+        grid-column: col-start1 / grid-end;
+        
+    }
+
+    .sidebar {
+        grid-column: col-start 1 / col-end 3;
+        grid-row: box-start 1 / main-end;
+         
+    }
+
+    .main-content {
+        grid-column: col-start 1 / col-end 3;
+    }
+
+    .footer {
+        grid-column: col-star 1 / grid-end;
+    }*/
+
+    ///////////////////////
+    /// 3nd method naming grid areas
+    /// 
+    
+    /*display: grid;
+    grid-template-rows: 100px 200px 400px 100px; 
+    grid-template-columns: repeat(3, 1fr) 200px;
+    grid-gap: 30px;
+
+    grid-template-areas: "head head head head"
+                          "box box box side"
+                          "main main main sidebar"
+                          "foot foot foot foot";
+
+                          .header {
+                           
+                            grid-area: head;
+                        }
+                    
+                        .sidebar {
+                           grid-area: side;
+                             
+                        }
+                    
+                        .main-content {
+                            grid-area: main;
+                        }
+                    
+                        .footer {
+                           grid-area: footer;
+                        }
+
+                    }
+
+                    <div class="challenge">
+                            <div class="header">header</div>
+                            <div class="small-box-1">small box 1</div>
+                            <div class="small-box-2">small box 2</div>
+                            <div class="small-box-3">small box 3</div>
+                            <div class="main-content">main-content</div>
+                            <div class="sidebar">sidebar</div>
+                            <div class="footer">footer</div>
+                        </div> */
