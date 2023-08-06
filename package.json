@@ -4,13 +4,7 @@
   "description": "llanding page for gride",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/_main.scss CSS/style.css -w",
-    "devserver": "live-server --browser=firefox",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/_main.scss CSS/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' CSS/style.comp.css -0 CSS/style.prefix.css",
-    "compress:css": "node-sass CSS/style.prefix.css CSS/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "watch:sass": "node-sass sass/_main.scss CSS/style.css -w"
   },
   "author": "",
   "license": "ISC",
